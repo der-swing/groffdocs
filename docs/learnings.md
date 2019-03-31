@@ -64,32 +64,45 @@ In general, `.RS` stands for "right shift" - an thus shifts everything enclosed 
 to the right. The second thing here is the `.IP` which is the general macro for any indented paragraph.
 The bulletin might also be replaced by "1)" if you want to list a bunch of exercise problems for example.
 
-Sans Serif / Helvetica font laden 
-(gesamtes Dokument)
-	.fp 1 H
-(nur nächste Zeile)
-	.fam H
+# Sans Serif / Helvetica font in your document
+(entire document):
+```
+.fp 1 H
+```
+(next line only)
+```
+.fam H
+```
 
-Include EPS file
-	.PSPIC header.eps
+# Include EPS file
+```
+.PSPIC header.eps
+```
 compile with 
-	groff -m me -Tps file > out.ps && ps2pdf out.ps nice.pdf
+```
+groff -m me -Tps file > out.ps && ps2pdf out.ps nice.pdf
+```
+- needs -Tps option
 
-needs -Tps option
+# Define short handles for proper formatting of results with units and spacing
 
-Define short handles for proper formatting of results with units and spacing
-	.EQ
-	define mm '^ roman "mm"'
-	.EN
+```
+.EQ
+define mm '^ roman "mm"'
+.EN
+```
 
+# Have letters show place and date right justified, then return to normal justification:
+```
+.ad r
+Any City, March 22 2019
+.br
+.ad b
+```
 
-Have letters show place and date right justified, then return to normal justification:
-	.ad r
-	Berlin, 22. März 2019
-	.br
-	.ad b
-
-Turn on line numbering
-	.nm a b
-where a is the starting number and b is the increment
-turn off line numbering with .nm without any arguments
+# Turn on line numbering
+```
+.nm a b
+```
+Here, `a` is the starting number and `b` is the increment.
+Turn off line numbering with `.nm` without any arguments.

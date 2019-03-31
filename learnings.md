@@ -8,10 +8,16 @@ define > `\(ra`
 .EN
 ```
 Now it's very easy to make a ket-vector look nice, as `| psi >` now gives *|𝜓⟩*.
+Note that this will get you in trouble, once you *actually* want to put a ">" (greater than)
+anywhere in your equation. In that case, the definition needs to be temporarily disabled...
+I have to check how that one goes.
 
 
-Bibliography for refer uses the same formatting as Endnote. 
+# Bibliography for refer uses the same formatting as Endnote. 
 Download citations from journals accordingly!
+If you want your citations included by using `refer` along with `groff` there is a syntax 
+that the bibliography files need to adhere to. Luckily
+
 
 Flag to recognize utf-8 symbols like umlauts (äüö) and greek letters (µ):
 	groff -K utf-8 ...

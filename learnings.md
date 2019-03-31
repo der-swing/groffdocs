@@ -21,10 +21,29 @@ and since most sources for scientific papers offer you to download citations for
 can just use those and wont have to change anything.
 You might want to add a memorable handle to your references though.
 
-
-
+# Proper input encoding for special characters and digraphs
 Flag to recognize utf-8 symbols like umlauts (äüö) and greek letters (µ):
-	groff -K utf-8 ...
+```
+groff -K utf-8 ...
+```
+NOTE: On macOS Mojave the preinstalled version of groff (1.19.2?) does not recognize the `-K` option 
+and will throw an error. The only way around it is to install a newer version using *homebrew*
+```
+brew install groff gs
+```
+(Not sure if the `gs` for *ghostscript* is required or not...)
+
+ALSO: The utf-8 encoding will not work properly when you source separate files 
+into your groff file like `.so chapter-one.txt`.
+There is, however, a workaround for that case, too:
+```
+preconv chapter-one.txt > new-chapter-one.txt
+```
+Here, `preconv` does the (duh!) preconversion of the text file into something that 
+groff can understand. Then by sourcing `.so new-chapter-one.txt` in the groff file,
+everything will be *fiiiine*.
+
+
 
 MS macro needs on instance of .PP to make title page work properly.
 

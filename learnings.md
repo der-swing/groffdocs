@@ -3,10 +3,12 @@ If you are a physicist using `groff`, you will inevitebly at some point use the
 "bra/ket" notation to describe wavefunctions in quantum mechanics.
 There is a neat way to make things much more pleasant to type in the math environment.
 ```
-	.EQ
-	define > `\(ra`
-	.EN
+.EQ
+define > `\(ra`
+.EN
 ```
+Now it's very easy to make a ket-vector look nice, as `| psi >` now gives *|𝜓⟩*.
+
 
 Bibliography for refer uses the same formatting as Endnote. 
 Download citations from journals accordingly!

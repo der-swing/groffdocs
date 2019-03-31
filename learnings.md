@@ -16,7 +16,11 @@ I have to check how that one goes.
 # Bibliography for refer uses the same formatting as Endnote. 
 Download citations from journals accordingly!
 If you want your citations included by using `refer` along with `groff` there is a syntax 
-that the bibliography files need to adhere to. Luckily
+that the bibliography files need to adhere to. Luckily the format used by *EndNote* is identical, 
+and since most sources for scientific papers offer you to download citations for *EndNote*, you
+can just use those and wont have to change anything.
+You might want to add a memorable handle to your references though.
+
 
 
 Flag to recognize utf-8 symbols like umlauts (äüö) and greek letters (µ):

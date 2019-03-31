@@ -44,16 +44,25 @@ groff can understand. Then by sourcing `.so new-chapter-one.txt` in the groff fi
 everything will be *fiiiine*.
 
 
+# MS macro needs on instance of .PP to make title page work properly.
+Uh. Ok, I guess? If you want to make use of the title page functionality that comes 
+with using the `-ms` macro package, make sure you have an indented paragraph (`.PP`) 
+in your document. I'm not even sure anymore when I put this here, but right now I would
+assume that this works with unindented paragraphs (or: leading paragraphs, `.LP`) as well.
 
-MS macro needs on instance of .PP to make title page work properly.
-
-Proper listing of items with nice indentation when using MS macros
-	.RS
-	.IP \[bu] 2n
-	Item 1, bu for bulletin icon instead of -
-	.IP \[bu]
-	Item 2, 2n to adjust indentation after bulletin
-	.RE
+# Proper listing of items with nice indentation when using MS macros
+```
+.RS
+.IP \[bu] 2n
+Item 1, bu for bulletin icon instead of -
+.IP \[bu]
+Item 2, 2n to adjust indentation after bulletin
+.RE
+```
+Pretty straight forward.
+In general, `.RS` stands for "right shift" - an thus shifts everything enclosed up until `.RE`
+to the right. The second thing here is the `.IP` which is the general macro for any indented paragraph.
+The bulletin might also be replaced by "1)" if you want to list a bunch of exercise problems for example.
 
 Sans Serif / Helvetica font laden 
 (gesamtes Dokument)

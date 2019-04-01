@@ -12,7 +12,9 @@ I am no expert though. Not at all.
 
 ## Groff 2018
 [groff - The GNU implementation of troff](ressources/groff2018.pdf)
+
 *Author(s): Trent. A Fisher, Werner Lemberg*
+
 Great, extensive overview over the GNU implementation of troff (=`groff`) 
 in its most recent version 1.22.4.
 This >250 page documentation covers everything from the history, to the 
